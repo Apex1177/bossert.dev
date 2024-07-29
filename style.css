@@ -1,0 +1,284 @@
+@font-face {
+    font-family: MCFont;
+    src: url(./Mojangles.otf);
+}
+
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes scroll {
+    from {background-position: 0 top}
+    to {background-position: -925925vw top} 
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + 0.6vw); /* extend the size to compensate for the blur */
+    height: calc(100% + 1vh);
+    margin-top: -0.6vh;
+    margin-left: -0.3vw;
+    background: url("./assets/panorama_light.png") repeat-x 0 0;
+    background-size: cover;
+    filter: blur(0.2vw);
+    z-index: -1;
+    background-repeat: repeat-x;
+    animation: scroll 400000s linear infinite;
+}
+.bg-image2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + 0.6vw); /* extend the size to compensate for the blur */
+    height: calc(100% + 1vh);
+    margin-top: -0.6vh;
+    margin-left: -0.3vw;
+    background: url("./assets/dirtbackground.png") repeat-x 0 0;
+    background-size: cover;
+    filter: blur(0.2vw);
+    z-index: -1;
+    background-repeat: repeat-x;
+    animation: scroll 400000s linear infinite;
+}
+
+@media only screen and (orientation : portrait)  {
+
+
+
+    #titleText {
+        width: 100vw;
+        height:fit-content !important;
+    }
+    #splash {
+        display: none;
+    }
+
+#titleScreen button {
+    background: url(./assets/BG_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 20vw !important;
+    width: 100vw !important;
+    height: 20vw !important;
+    font-size: 10vw !important;
+}
+
+#titleScreen button:hover {
+    background: url(./assets/BB_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 20vw;
+    color: #FFFF55;
+    text-shadow: 0.15vw 0.15vw rgb(79, 86, 6);
+}
+
+}
+
+@keyframes scroll-left {
+    0% {
+        background-position: 0 0, -100% 0;
+    }
+    100% {
+        background-position: 100% 0, 0 0;
+    }
+}
+
+h1, button, span {
+    font-weight: normal;
+}
+
+body {
+    font-family: MCFont;
+    position: relative;
+    color: white;
+    display: block;
+
+    margin-left: auto;
+    padding-left: 90px; 
+    padding-right: 90px; 
+    margin-right: auto;
+  
+    width: 70%;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center; 
+    -webkit-user-select: none;         
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    overflow-x:hidden;
+    font-size : 3vw;
+}
+
+#titleText {
+    height: 15vh;
+    margin-top: 8vh;
+}
+
+#title {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10vh;
+}
+
+:root {
+    --text-width: 2vw;
+  }
+
+@keyframes splash-zoom {
+    0% {
+        font-size: var(--text-width);
+    }
+    50% {
+        font-size: calc(var(--text-width) + 0.1vw);
+    }
+    100% {
+        font-size: var(--text-width);
+    }
+}
+
+#splash {
+    pointer-events: none;
+    color: #FFFF55;
+    text-shadow: calc(var(--text-width)/10) calc(var(--text-width)/10) rgb(79, 86, 6);
+    font-size:1vw;
+    transform: rotate(343.2deg);
+    margin: 0 auto;
+    width: 111vw;
+    margin-top: 4vh;
+    position: absolute;
+    bottom: 65vh;
+    right: -4vw;
+}
+
+#splashSpan {
+    animation: splash-zoom 0.5s infinite;
+    position: relative;
+    right: -17%;
+    bottom: -10%;
+    margin: 0;
+    opacity:0;
+    animation-play-state: paused;
+}
+
+#titleScreen button {
+    text-rendering: optimizeLegibility;
+    margin-top: 1.5vh;
+    font-family: MCFont;
+    background: url(./assets/BG_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 3vw;
+    border: none;
+    color: #f5f4f5;
+    text-shadow: 0.15vw 0.15vw #504f50;
+    width: 35vw;
+    height: 3vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+#titleScreen button:hover {
+    background: url(./assets/BB_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 3vw;
+    color: #FFFF55;
+    text-shadow: 0.15vw 0.15vw rgb(79, 86, 6);
+}
+
+#menuScreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#menu {
+    background-color: transparent;
+    width: 48.5vw;
+    height: 50vh;
+    margin-top: 11vh !important;
+    margin: auto;
+}
+
+#menuScreen #back {
+    font-family: MCFont;
+    color: #f5f4f5;
+    text-shadow: 0.15vw 0.15vw #504f50;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 4.1vh;
+    left: 4.8vw;
+    border: none;
+    background: none;
+    margin: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+#menuScreen #back img {
+    height: 4.1vh;
+    width: 4.1vh;
+    margin-right: 0.15vw;
+}
+
+#menuScreen #back span {
+    position: relative;
+    bottom: 0.45vw;
+}
+
+#menuButtons {
+    margin-top: 12vw;
+}
+
+#menuButtons a {
+    text-align: left;
+    display: inline-block;
+    text-rendering: optimizeLegibility;
+    font-family: MCFont;
+    background: url(./assets/BG_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 4.5vw;
+    border: none;
+    color: #f5f4f5;
+    text-shadow: 0.15vw 0.15vw #504f50;
+    width: 42.5vw;
+    height: 4.7vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+#menuButtons a span {
+    margin-left: 1.7vw;
+    position: relative;
+    top:-1vw;
+}
+
+#menuButtons a img {
+    margin-left: 1.1vw;
+    height: 3.3vw;
+    width: 3.3vw;
+    margin-top:0.6vw;
+}
+
+#menuButtons a:hover {
+    background: url(./assets/BB_Button.png);
+    background-repeat:no-repeat;
+    background-size: 100% 4.5vw;
+    color: #FFFF55;
+    text-shadow: 0.15vw 0.15vw rgb(79, 86, 6);
+}
