@@ -133,7 +133,7 @@ document.getElementById('back').addEventListener("mousedown", (event) => {
 
 socials = [["Discord", "https://discord.gg/yFEkA8kCJp"], ["LinkedIn", "https://www.linkedin.com/in/henry-bossert-86a28a320/"], ["Github", "https://github.com/Apex1177"]]
 projects = [["AutoMC", "https://github.com/Apex1177/AutoMC"], ["MapsNotIncluded", "https://github.com/Apex1177/MapsNotIncluded"]]
-info = [["Bio", "https://www.bossert.dev/bio.html"]]
+info = [["Bio", "https://www.bossert.dev/bio.html"], ["Esports", "https://www.bossert.dev/esports.html"]]
 
 function loadMenu(name){
     name=name.toLowerCase()
